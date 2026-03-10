@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Site de Naim</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div id="entete-de-page">
+        <p>Site de Naim</p>
+    </div>
+
+    <table id="bloc-menu">
+        <tr>
+            <th><a href="index.html">Accueil</a></th>
+            <th><a href="productions.html">Productions scolaires</a></th>
+            <th><a href="passions.html">Mes passions</a></th>
+            <th><a href="videos.html">Mes vidéos</a></th>
+            <th><a href="monsitedereve.html">Mon site de rêve</a></th>
+        </tr>
+    </table>
+
+    <div class="contenu">
+
+        <div class="presentation">
+            <img src="avatar.jfif" alt="avatar Naim" style="border-radius:50%;">
+
+            <div class="texte-presentation">
+                <h2>Je me présente...</h2>
+                <p>
+                    Je m’appelle Naim et je suis actuellement en classe de 2nde 7.
+                    Je suis quelqu’un de drôle et toujours ouvert à de nouvelle rencontre.
+                    Ce qui me passionne dans la vie c’est avant tout c'est le sport et plus précisémment le football.
+                    J’aime particulièrement jouer et rigoler.
+                    Je m’intéresse aussi beaucoup aux jeux vidéos et à l’informatique. Je lis beaucoup de choses à ces sujets et cela m'intrigue. 
+                    Plus tard, j’aimerais travailler dans le secteur de l'informatique.
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- AUDIO + BOUTONS -->
+    <div>
+        <audio id="zic" src="music.mp3"></audio>
+
+        <div>
+            <a href="javascript:void(0)" onclick="changeState(0)" class="bouton">PLAY</a>
+            <a href="javascript:void(0)" onclick="changeState(1)" class="bouton">PAUSE</a>
+            <a href="javascript:void(0)" onclick="changeState(2)" class="bouton active">STOP</a>
+        </div>
+    </div>
+
+    <!-- SCRIPT -->
+    <script>
+        function changeState(x) {
+            let boutons = document.querySelectorAll(".bouton");
+            let audio = document.querySelector("#zic");
+
+            for (let i = 0; i < boutons.length; i++) {
+                boutons[i].classList.remove("active");
+            }
+
+            boutons[x].classList.add("active");
+
+            if (x == 0) audio.play();
+            if (x == 1) audio.pause();
+            if (x == 2) {
+                audio.pause();
+                audio.currentTime = 0;
+            }
+        }
+    </script>
+
+    <hr>
+
+    <div id="infos">
+        <h3>A lire aussi :</h3>
+        <ul>
+            <p>
+                <a href="productions.html">Découvrez mon travail sur Boule de Suif, réalisé en collaboration.</a>
+            </p>
+            <p>
+                <a href="monsitedereve.html">Découvrez mon site de rêve</a>
+            </p>
+            <p>
+                <a href="https://www.facebook.com/ASBTourcoing/">
+                Découvrez le compte facebook de mon club de foot.</a>
+            </p>
+        </ul>
+    </div>
+
+    <br>
+
+    <div id="pied-de-page">
+        <p>
+            Projet SNT - Dernière mise à jour : 10/03/2026 <br>
+            Les textes et images utilisés n'engagent que son auteur : Naim
+        </p>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,80 @@
+iframe {
+    height: 100vh;
+    width: 100%;
+}
+
+/* Police globale */
+body {
+    background-color: #E8F1F2;        
+    font-family: 'Inter', Arial, sans-serif;
+    font-size: 16px;
+    color: #1F2D3D;                   
+}
+
+/* Images */
+img {
+    float: left;
+    margin-right: 20px;
+}
+
+/* Présentation */
+.presentation {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.presentation img {
+    width: 120px;
+    height: auto;
+}
+
+.texte-presentation {
+    flex: 1;
+}
+
+th { 
+    width: 500px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+
+ul { 
+    list-style-type: square; 
+}
+
+h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 26px;
+    color: #0A9396;                   
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+#entete-de-page {
+    padding: 5px;
+    height: 100px;
+    background-color: #005F73;        
+    font-family: 'Montserrat', sans-serif;
+    font-size: 40px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#bloc-menu {
+    height: 36px;
+    background-color: #0A9396;        
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
